@@ -23,6 +23,6 @@ class Cpf(object):
         ultimate_sum = sum([(11-idx) * int(digit)
                             for idx, digit in enumerate(self.cpf[0:10])])
         ultimate_rem = (ultimate_sum * 10 % 11
-                           if ultimate_sum * 10 % 11 != 10
-                           else 0)
+                        if ultimate_sum * 10 % 11 != 10
+                        else 0)
         return ultimate_rem == int(self.cpf[-1])
